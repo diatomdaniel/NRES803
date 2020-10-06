@@ -1,7 +1,6 @@
-#' Data and functions for NRES 803 Ecological Statistics
+#' Functions for NRES 803 Ecological Statistics
 #'
-#' This package combines all the datasets necessary for labs and homeworks in NRES803.
-#' I will also add useful functions that we create during the semester.
+#' This package contains useful functions for students in NRES/STAT 803 Ecological Statistics at the University of Nebraska-Lincoln.
 #'
 #'
 #'

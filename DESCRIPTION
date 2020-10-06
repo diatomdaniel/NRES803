@@ -1,10 +1,10 @@
 Package: NRES803
 Type: Package
-Title: Data and Functions for NRES 803 Ecological Statistics
-Version: 0.3.1.9004
+Title: Functions for NRES 803 Ecological Statistics
+Version: 0.4.0.9000
 Author: Drew Tyre
 Maintainer: Drew Tyre <atyre2@unl.edu>
-Description: The package contains data sets needed for NRES 803 Ecologial Statistics at the University of Nebraska-Lincoln. Also includes shortcut functions that prove useful for students.
+Description: The package contains functions useful for students in NRES 803 Ecologial Statistics at the University of Nebraska-Lincoln. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
