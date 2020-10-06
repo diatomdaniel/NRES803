@@ -1,0 +1,30 @@
+---
+title: "Default weekly lab template"
+author: "Your name here"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# this code chunk will not produce any output. 
+# Your submitted worksheets should have echo = FALSE below. 
+# Normally change nothing between line 12 and 15
+knitr::opts_chunk$set(echo = FALSE)
+library("tidyverse")
+theme_set(NRES803::theme_nres()) # this adjusts the default appearance of plots
+# this is a good place to load packages. 
+# library("somepackage")
+# this is also a good place to load data
+# yourdata <- read_csv("pathtofile")
+```
+
+# Section 1
+
+1) This will be the first question. Copy and paste the question text here. 
+
+> This will be the answer to the first question. Be sure to mark it with ">"
+
+```{r}
+# Insert data analysis and graphing code chunks *below* your text answers.
+```
+
