@@ -28,7 +28,8 @@ check_assumptions <- function(x, ...){
     ggplot2::geom_point() +
     ggplot2::geom_smooth(method="loess", formula = y~x) +
     ggplot2::geom_hline(yintercept = 0, linetype=2) +
-    my_theme
+    my_theme +
+    ggplot2::labs(x = "Fitted values", y = "Standardised residuals")
   ## plot 1 qq plot
   # get int and slope for qqline
   probs <- c(0.25,0.75)
@@ -37,23 +38,27 @@ check_assumptions <- function(x, ...){
   slope <- diff(y)/diff(x)
   int <- y[1L] - slope * x[1L]
   rr1 <- ggplot2::ggplot(rr, ggplot2::aes(sample=.std.resid)) +
+    ggplot2::geom_abline(intercept = int, slope = slope, linetype = 2, size = 2, col = "red") +
     ggplot2::geom_qq(size=ggplot2::rel(4)) +
-    ggplot2::geom_abline(intercept = int, slope = slope, linetype = 2, size = 2) +
-    my_theme
+    my_theme + 
+    ggplot2::labs(x = "Theoretical quantiles", y = "Sample quantiles")
 
   ## plot 2 scale location plot
   rr2 <- ggplot2::ggplot(rr, ggplot2::aes(x = .fitted, y = sqrt(abs(.std.resid)))) +
     ggplot2::geom_point() +
     ggplot2::geom_smooth(method="loess", formula = y~x) +
     ggplot2::geom_hline(yintercept  = 0.822179) +
-    my_theme
+    my_theme + 
+    ggplot2::labs(x = "Fitted values", y = expression(sqrt("Standardised residuals")))
+  
   ## plot 3 cooks distance plot
   rr3 <- ggplot2::ggplot(rr, ggplot2::aes(.hat, .std.resid)) +
     ggplot2::geom_vline(size = 2, xintercept = 0) +
     ggplot2::geom_hline(size = 2, yintercept = 0) +
     ggplot2::geom_point(ggplot2::aes(size = .cooksd)) +
     ggplot2::geom_smooth(method="loess", formula = y~x, se = FALSE) +
-    my_theme
+    my_theme + 
+    ggplot2::labs(x = "Leverage (Hat-matrix)", y = "Standardised residuals")
 
   graphics::plot(gridExtra::arrangeGrob(rr0, rr1, rr2, rr3, nrow=2))
 
