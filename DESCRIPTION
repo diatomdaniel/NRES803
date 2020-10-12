@@ -3,6 +3,7 @@ Type: Package
 Title: Functions for NRES 803 Ecological Statistics
 Version: 0.4.0.9000
 Authors@R: c(person("Drew", "Tyre", email = "atyre2@unl.edu", role = "cre"),
+             person("Sergio", "Gabriel", email="gaps@huskers.unl.edu", role="ctb"),
              person("Yen Ning", "Chai", email = "yenningchai@huskers.unl.edu", role = "cre"),
              person("Andrew", "Laws", email = "andrewroylaws@gmail.com", role = "ctb"),
              person("Catherine", "Chan", email="cchan5@huskers.unl.edu", role="ctb"),
