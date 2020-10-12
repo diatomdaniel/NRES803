@@ -2,7 +2,11 @@ Package: NRES803
 Type: Package
 Title: Functions for NRES 803 Ecological Statistics
 Version: 0.4.0.9000
-Authors@R: person("Yen Ning", "Chai", email = "yenningchai@huskers.unl.edu", role = "cre")
+Authors@R: c(person("Drew", "Tyre", email = "atyre2@unl.edu", role = "cre"),
+             person("Yen Ning", "Chai", email = "yenningchai@huskers.unl.edu", role = "cre"),
+             person("Andrew", "Laws", email = "andrewroylaws@gmail.com", role = "ctb"),
+             person("Catherine", "Chan", email="cchan5@huskers.unl.edu", role="ctb"),
+             person("diatom", "daniel", email = "daniel.gschwentner@gmail.com", role = "ctb"))
 Maintainer: Drew Tyre <atyre2@unl.edu>
 Description: The package contains functions useful for students in NRES 803 Ecologial Statistics at the University of Nebraska-Lincoln. 
 License: MIT + file LICENSE
